@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.divmain{
+
+    background-image: url(images/photo-1601126374163-29f78d5e6d9c.avif);
+
+}
