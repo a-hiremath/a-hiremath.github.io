@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
 
@@ -15,9 +15,9 @@
         </div>
 
         <div class="animate__animated animate__slideInRight grid grid-cols-3">
-            <a href="index.html" class="py-2 text-center underline underline-offset-4 font-semibold hover:text-blue-700">Home</a>
-            <a href="getInvolved.html" class="py-2 text-center font-medium hover:text-blue-700 hover:animate__animated animate__backInDown">Get Involved</a>
-            <a href="cabinet.html" class="py-2 text-center font-semibold hover:text-blue-700">About our Cabinet</a>
+            <a href="index.html" class="py-2 text-center underline underline-offset-4 font-semibold hover:text-blue-700 homeButton page-transition">Home</a>
+            <a href="getInvolved.html" class="animate__animated py-2 text-center font-medium hover:text-blue-700 getInvolvedButton page-transition">Get Involved</a>
+            <a href="cabinet.html" class="py-2 text-center font-semibold hover:text-blue-700 aboutButton page-transition">About our Cabinet</a>
         </div>
         
     </div>
@@ -25,17 +25,25 @@
     <div class="grid grid-cols-3 bg-cover h-screen w-screen bg-no-repeat" style="background-image: url(images/photo-1601126374163-29f78d5e6d9c.avif)">
         <p></p>
         <p></p>
-        <p class=" animate__animated animate__slideInRight text-xl text-center pt-20 pr-8 font-bold text-white">Balbir Singh Sodhi, a beloved Sikh father and Phoenix entrepreneur, was tragically killed on September 15, 2001, by a man who wrongly saw him as an enemy in the aftermath of 9/11. His death mourned deeply, reflects a heartbreaking tale of mistaken identity and loss.</p>
+        <p class="animate__animated animate__backInRight animate__delay-1s text-xl text-center pt-20 pr-8 font-bold text-white BalbirText">Balbir Singh Sodhi, a beloved Sikh father and Phoenix entrepreneur, was tragically killed on September 15, 2001, by a man who wrongly saw him as an enemy in the aftermath of 9/11. His death mourned deeply, reflects a heartbreaking tale of mistaken identity and loss.</p>
     
     </div>
 
-    <div class="grid grid-cols-1 bg-slate-600 h-auto">
+    <div class="flex bg-slate-600 h-4/5">
     
-        <div class="flex justify-center items-center">
-            <img src="images/NMAH-AHB2013q017784.jpg" alt="balbir" class="flex justify-center items-center pt-7 px-32">
+        <div class="flex justify-center w-4/5 items-center">
+            <img src="images/NMAH-AHB2013q017784.jpg" alt="balbir" class="flex justify-center items-center py-7 pl-32">
+        
         </div>
+        <div class="flex">
+        <p class=" py-7 px-15 text-center align-middle font-bold text-white ">Balbir Signh was a beloved father, husband, and brother. But all those identities were overshadowed the day he was murdered in post 9/11 backlash.</p>
+        </div>
+        
 
-        <p class="text-center py-7 px-8 font-bold text-white ">Balbir Signh was a beloved father, husband, and brother. But all those identities were overshadowed the day he was murdered in post 9/11 backlash.</p>
 
-    </div>   
+    </div>  
+    <script src="index.js"></script>
+</body>
+</html>
+
     
