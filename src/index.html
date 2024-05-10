@@ -5,31 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="custom.css">
 </head>
 <body>
 
-    <div class="grid grid-cols-2 bg-slate-400 w-screen p-6">
+    <div class="grid grid-cols-2  bg-slate-400 w-screen p-6">
         <div class="animate__animated animate__slideInLeft">
             <p class="italic text-center font-bold">Cabinet of Curiosities</p>
             <p class="px-7 text-sm text-center font-med">Aditya Hiremath, Sam Ewen, Sam Helft</p>
         </div>
+        
+        <div id="hamburger" class="lg:hidden md:hidden flex flex-col justify-center items-end space-y-2 pr-8">
+            <span class="block h-0.5 w-8 bg-white"></span>
+            <span class="block h-0.5 w-8 bg-white"></span>
+            <span class="block h-0.5 w-8 bg-white"></span>
+        </div>     
 
-        <div class="animate__animated animate__slideInRight grid grid-cols-3">
-            <a href="index.html" class="py-2 text-center underline underline-offset-4 font-semibold hover:text-blue-700 homeButton page-transition">Home</a>
+        <div class="animate__animated animate__slideInRight grid grid-cols-3" id="navBarItems">
+        <a href="index.html" class="py-2 text-center underline underline-offset-4 font-semibold hover:text-blue-700 homeButton page-transition">Home</a>
             <a href="getInvolved.html" class="animate__animated py-2 text-center font-medium hover:text-blue-700 getInvolvedButton page-transition">Get Involved</a>
             <a href="cabinet.html" class="py-2 text-center font-semibold hover:text-blue-700 aboutButton page-transition">About our Cabinet</a>
         </div>
-        
+
     </div>
 
-    <div class="grid grid-cols-3 bg-cover h-screen w-screen bg-no-repeat" style="background-image: url(images/photo-1601126374163-29f78d5e6d9c.avif)">
+    <div class="grid grid-cols-3 bg-cover h-screen w-screen bg-no-repeat testOne" style="background-image: url(images/photo-1601126374163-29f78d5e6d9c.avif)">
+
         <p></p>
+        
         <p></p>
-        <p class="animate__animated animate__backInRight animate__delay-1s text-xl text-center pt-20 pr-8 font-bold text-white BalbirText">Balbir Singh Sodhi, a beloved Sikh father and Phoenix entrepreneur, was tragically killed on September 15, 2001, by a man who wrongly saw him as an enemy in the aftermath of 9/11. His death mourned deeply, reflects a heartbreaking tale of mistaken identity and loss.</p>
+
+        <p class="animate__animated animate__backInRight animate__delay-1s text-xl text-center pt-20 pr-8 font-bold text-white">Balbir Singh Sodhi, a beloved Sikh father and Phoenix entrepreneur, was tragically killed on September 15, 2001, by a man who wrongly saw him as an enemy in the aftermath of 9/11. His death mourned deeply, reflects a heartbreaking tale of mistaken identity and loss.</p>
     
     </div>
 
-    <div class="flex bg-slate-600 h-4/5">
+    <div class="flex bg-slate-600 h-4/5 testOne">
     
         <div class="flex justify-center w-4/5 items-center">
             <img src="images/NMAH-AHB2013q017784.jpg" alt="balbir" class="flex justify-center items-center py-7 pl-32">

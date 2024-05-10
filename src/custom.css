@@ -1,0 +1,15 @@
+#navBarItems{
+    @media screen and (max-width: 680px) {
+        display: none;
+    }
+}
+
+.BalbirText{
+        display: none;
+}
+
+.testOne{
+    @media screen and (max-width: 1200px) {
+        display:none
+    }
+}
