@@ -1,5 +1,51 @@
+
 document.addEventListener('DOMContentLoaded', function() {
+
+    const hamburger = document.getElementById('hamburger'); 
+    const theMenu = document.getElementById('menu'); 
+    var clickered = false;
+
+    const toggle = function(){
+        
+        if(clickered == false){
+            theMenu.id = 'menu';
+            clickered = true;
+        }
+
+        else {
+            theMenu.id = 'unmenu';
+            clickered = false;
+        }
+        
+    }
+
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 680) {
+            document.getElementById("flower").id = "unflower";
+        } else if (window.innerWidth <= 680) {
+            document.getElementById("unflower").id = "flower";
+        }
+    });
+
+
+
+
+        
     
+    hamburger.addEventListener("click", function(e) {
+        
+        console.log('clicked');
+        e.stopPropagation();
+        toggle();
+
+    });
+
+    
+
+    
+
+
     var transitionLinks = document.querySelectorAll('.page-transition');
 
     transitionLinks.forEach(function(link) {
@@ -35,3 +81,5 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('animate__animated', 'animate__fadeIn');
 });
+
+

@@ -4,12 +4,30 @@
     }
 }
 
-.BalbirText{
-        display: none;
+#testTest{
+ @media screen and (max-width:680px) {
+    display: none;
+ }    
 }
 
-.testOne{
-    @media screen and (max-width: 1200px) {
-        display:none
-    }
+#flower {
+    background-image: url("images/image.png");
+}
+
+#unflower {
+    background-image: url("images/photo-1601126374163-29f78d5e6d9c.avif");
+}
+
+
+#menu {
+    visibility: visible;
+}
+
+#unmenu {
+    visibility: hidden;
+}
+
+#show{
+    visibility: visible;
+    opacity: 1;
 }
