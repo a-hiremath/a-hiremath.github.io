@@ -1,33 +1,90 @@
-#navBarItems{
-    @media screen and (max-width: 680px) {
+/* General Styles */
+:root {
+    --bg-image-flower: url("images/image.png");
+    --bg-image-unflower: url("images/photo-1601126374163-29f78d5e6d9c.avif");
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Utility and State Styles */
+.hidden {
+    display: none;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Navbar Styles */
+#navBarItems {
+    display: flex; /* Ensures content is flexibly adjusted */
+}
+
+@media screen and (max-width: 680px) {
+    #navBarItems, #testTest {
         display: none;
     }
 }
 
-#testTest{
- @media screen and (max-width:680px) {
-    display: none;
- }    
-}
-
+/* Background Images for Responsive Design */
 #flower {
-    background-image: url("images/image.png");
+    background-image: var(--bg-image-flower);
 }
 
 #unflower {
-    background-image: url("images/photo-1601126374163-29f78d5e6d9c.avif");
+    background-image: var(--bg-image-unflower);
 }
 
-
+/* Menu Visibility Control */
 #menu {
-    visibility: visible;
+    visibility: none;
 }
 
 #unmenu {
-    visibility: hidden;
+    visibility: block;
 }
 
-#show{
-    visibility: visible;
-    opacity: 1;
+/* Transition and Animation Effects */
+.animate__fadeIn,
+.animate__fadeOut,
+.animate__slideInLeft,
+.animate__slideInRight {
+    animation-duration: 1s; /* Ensures uniform animation timing */
+}
+
+/* Additional Styling for Text and Layouts */
+.text-xl {
+    font-size: 1.25rem; /* Extra large text */
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.bg-cover {
+    background-size: cover; /* Covers the entire area of the container */
+}
+
+.bg-no-repeat {
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+}
+
+.text-center {
+    text-align: center; /* Centers text horizontally */
+}
+
+/* Additional Styling for Specific Sections */
+.section {
+    padding: 20px;
+    background-color: #f0f0f0; /* Light gray background for sections */
+}
+
+/* Image Styling */
+img {
+    width: 100%; /* Full-width images */
+    height: auto; /* Maintain aspect ratio */
 }
