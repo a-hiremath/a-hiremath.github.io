@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger'); 
     const theMenu = document.getElementById('menu'); 
-    let clickered = false;
+
 
     function toggleMenu() {
-        theMenu.id = clickered ? 'unmenu' : 'menu';
-        clickered = !clickered;
+        theMenu.classList.toggle("hidden");
     }
 
-    hamburger.addEventListener("click", function(e) {
-        console.log('Menu toggle clicked');
-        e.stopPropagation();
+    hamburger.addEventListener('click', function(){
+        console.log("log");
         toggleMenu();
-    });
+    })
+
+    
+
 
     function adjustFlower() {
         const flower = document.getElementById("flower") || document.getElementById("unflower");
