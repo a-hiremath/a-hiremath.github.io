@@ -1,55 +1,54 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="custom.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="custom.css">
 </head>
 <body class="bg-slate-400 w-screen">
 
-    <div class="grid grid-cols-2 p-6 gap-4 items-center">
-        <div class="animate__animated animate__slideInLeft text-center italic font-bold">
-            <p>Cabinet of Curiosities</p>
-            <p class="text-sm">Aditya Hiremath, Sam Ewen, Sam Helft</p>
-        </div>
-        
-        <div id="hamburger" class="animate__animated animate__slideInRight flex flex-col justify-center items-end space-y-2 pr-8 lg:hidden md:hidden hover:cursor-pointer">
-            <span class="block h-0.5 w-8 bg-white"></span>
-            <span class="block h-0.5 w-8 bg-white"></span>
-            <span class="block h-0.5 w-8 bg-white"></span>
+    <!-- Main Container -->
+    <div id="navContainer" class="flex flex-col justify-between items-center px-6 pt-6 py-0 bg-slate-400 transition-all duration-500 ease-in-out">
+        <!-- Nav Bar Wrapper -->
+        <div class="flex pb-3 justify-between w-full">
+            <!-- Left Content -->
+            <div class="animate__animated animate__slideInLeft text-left italic font-bold">
+                <p>Cabinet of Curiosities</p>
+                <p class="text-sm">Aditya Hiremath, Sam Ewen, Sam Helft</p>
+            </div>
+            
+            <!-- Right Links -->
+            <div id="navBarItems" class="hidden lg:flex space-x-6">
+                <a href="index.html" class="underline underline-offset-4 font-semibold hover:text-blue-700 page-transition">Home</a>
+                <a href="getInvolved.html" class="font-medium hover:text-blue-700 page-transition">Get Involved</a>
+                <a href="cabinet.html" class="font-medium hover:text-blue-700 page-transition">About our Cabinet</a>
+            </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div id="hamburger" class="lg:hidden flex flex-col justify-center items-end p-4 space-y-2 pr-8 hover:cursor-pointer">
+                <span class="block h-0.5 w-8 bg-white"></span>
+                <span class="block h-0.5 w-8 bg-white"></span>
+                <span class="block h-0.5 w-8 bg-white"></span>
+            </div>
         </div>
 
-        <div id="navBarItems" class="animate__animated animate__slideInRight grid grid-cols-3 text-center">
-            <a href="index.html" class="py-2 underline pr-6 underline-offset-4 font-semibold hover:text-blue-700 page-transition">Home</a>
-            <a href="getInvolved.html" class="py-2 pr-6 font-medium hover:text-blue-700 page-transition">Get Involved</a>
-            <a href="cabinet.html" class="py-2 font-medium pr-6 hover:text-blue-700 page-transition">About our Cabinet</a>
+        <!-- Dropdown Menu for Mobile -->
+        <div id="menu" class="hidden py-6 flex-col top-20 text-center absolute bg-white w-screen py-7s shadow-lg border-t border-gray-200 transition-all duration-500 ease-in-out transform opacity-0">
+            <a href="index.html" class="p-2 hover:bg-gray-100">Home</a>
+            <a href="getInvolved.html" class="p-2 hover:bg-gray-100">Get Involved</a>
+            <a href="cabinet.html" class="p-2 hover:bg-gray-100">About our Cabinet</a>
         </div>
-
     </div>
 
-    <div id="menu" class="hidden grid grid-cols-1 p-2 bg-white w-auto h-auto">
-                
-        <a href="index.html" class="p-2 hover:bg-gray-500">home</a>
-        <a href="getInvolved.html" class="p-2 hover:bg-gray-500">get involved</a>
-        <a href="cabinet.html" class="p-2 hover:bg-gray-500">about our cabinet</a>
-    
-
-    </div>
-
-    <div class="grid grid-cols-3 bg-cover h-screen w-screen bg-no-repeat testOne" id="flower" >
-
+    <!-- Main Content -->
+    <div class="grid grid-cols-3 bg-cover h-screen w-screen bg-no-repeat testOne" id="flower">
         <p></p>
-        
         <p></p>
-
         <p id="testTest" class="animate__animated animate__backInRight animate__delay-1s text-xl text-center pt-20 pr-8 font-bold text-white">Balbir Singh Sodhi, a beloved Sikh father and Phoenix entrepreneur, was tragically killed on September 15, 2001, by a man who wrongly saw him as an enemy in the aftermath of 9/11. His death mourned deeply, reflects a heartbreaking tale of mistaken identity and loss.</p>
-    
     </div>
- 
+
     <script src="index.js"></script>
 </body>
 </html>
-
-    
