@@ -1,69 +1,115 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="custom.css">
 </head>
-<body class="opacity-0">
+<body class="bg-slate-400 w-screen">
 
-    <div class="grid grid-cols-2 bg-slate-400 w-screen p-6">
-        <div class="animate__animated animate__slideInLeft">
-            <p class="italic text-center font-bold">Cabinet of Curiosities</p>
-            <p class="px-7 text-sm text-center">Sam Ewen, Sam Helft, Aditya Hiremath</p>
-        </div>
-
-        <div class="animate__animated animate__slideInRight grid grid-cols-3">
-            <a href="index.html" class="py-2 text-center font-semibold hover:text-blue-700 homeButton page-transition">Home</a>
-            <a href="getInvolved.html" class=" underline underline-offset-4 animate__animated py-2 text-center font-medium hover:text-blue-700 getInvolvedButton page-transition">Get Involved</a>
-            <a href="cabinet.html" class="py-2 text-center font-semibold hover:text-blue-700 aboutButton page-transition">About our Cabinet</a>
-        </div>
-
-    </div>
-
-    <div class="bg-slate-500 sm:h-auto lg:h-screen md:h-screen w-screen">
-
-    <p class="font-bold text-center pt-10 text-2xl"> Join the fight for racial equality!</p>
-
-
-    <div class="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 pt-8">
-
-
- 
-
-    <!-- Fundraiser -->
-        
-    <div class="p-5">
-
-        <p class="font-semibold text-center text-xl"> Donate to a Fundraiser! </p>
-
-        <!-- Freeman Initiative -->
-
-        <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
-
-            <div class="text-center">
-            
-            <a href="https://donatestock.com/freeman-initiative"><img class="p-5 lg:pt-28 md:pt-24 pb-3" style="display:block; margin-left:auto; margin-right:auto; width:50%;" src="images/footer-logo.png" alt=""></a>
-
-            <a class="hover:text-blue-500 font-bold italic" href="https://donatestock.com/freeman-initiative">The Freeman Initiative</a>
-
-            <p class="pt-2 px-10">The Freeman Initiative is a non-partisan U.S.-based social justice education organization focused on dismantling institutions and systems that perpetuate race-based oppression and poverty for the most marginalized of our country, descendants of American chattel slavery.</p>
-        
+    <!-- Main Container -->
+    <div id="navContainer" class="flex flex-col justify-between items-center p-2 bg-slate-400 transition-all duration-500 ease-in-out">
+        <!-- Nav Bar Wrapper -->
+        <div class="flex p-3 justify-between w-full">
+            <!-- Left Content -->
+            <div class="animate__animated animate__slideInLeft text-left italic ">
+                <p class="font-extrabold text-center">Cabinet of Curiosities</p>
+                <p class="text-sm font-normal">Aditya Hiremath, Sam Ewen, Sam Helft</p>
             </div>
-        
-            <div class="text-center pt-10">
+            
+            <!-- Right Links -->
+            <div id="navBarItems" class="hidden lg:flex p-2">
+                <a href="index.html" class="font-medium px-5 hover:text-blue-700 page-transition">Home</a>
+                <a href="getInvolved.html" class="font-semibold px-5 underline underline-offset-4 hover:text-blue-700 page-transition">Get Involved</a>
+                <a href="cabinet.html" class="px-5 font-medium hover:text-blue-700 page-transition">About our Cabinet</a>
+            </div>
 
-            <a href="https://secure.actblue.com/donate/support-us?refcode=homepage_scrolldb&amount=25&_gl=1*1s019nc*_ga*NjIzNzE5NjY4LjE3MTMwNDYzMjc.*_ga_TNCXPWPB3H*MTcxMzA0NjMyNi4xLjAuMTcxMzA0NjMyNi42MC4wLjA.*_ga_81WFRBRG4C*MTcxMzA0NjMyNy4xLjAuMTcxMzA0NjMyNy4wLjAuMA.."><img class="p-5" style="display:block; margin-left:auto; margin-right:auto; width:50%;" src="images/colorofchange.png" alt="">
-            </a>
-
-            <a href="https://secure.actblue.com/donate/support-us?refcode=homepage_scrolldb&amount=25&_gl=1*1s019nc*_ga*NjIzNzE5NjY4LjE3MTMwNDYzMjc.*_ga_TNCXPWPB3H*MTcxMzA0NjMyNi4xLjAuMTcxMzA0NjMyNi42MC4wLjA.*_ga_81WFRBRG4C*MTcxMzA0NjMyNy4xLjAuMTcxMzA0NjMyNy4wLjAuMA.." class="font-semibold italic hover:text-blue-500">Color of Change</a>
-            <p class="pt-2 px-10">Color Of Change helps people respond effectively to injustice in the world around us. As a national online force driven by 7 million members, we move decision makers in corporations and government to create a more human and less hostile world for Black people, and all people. Until justice is real.</p>
-
-
+            <!-- Hamburger Menu for Mobile -->
+            <div id="hamburger" class="lg:hidden flex flex-col justify-center items-end p-4 space-y-2 pr-8 hover:cursor-pointer">
+                <span class="block h-0.5 w-8 bg-white"></span>
+                <span class="block h-0.5 w-8 bg-white"></span>
+                <span class="block h-0.5 w-8 bg-white"></span>
+            </div>
         </div>
 
+        <!-- Dropdown Menu for Mobile -->
+        <div id="menu" class="hidden py-6 flex-col top-20 text-center absolute bg-white w-screen py-7s shadow-lg border-t border-gray-200 transition-all duration-500 ease-in-out transform opacity-0">
+            <a href="index.html" class="p-2 hover:bg-gray-100">Home</a>
+            <a href="getInvolved.html" class="p-2 hover:bg-gray-100">Get Involved</a>
+            <a href="cabinet.html" class="p-2 hover:bg-gray-100">About our Cabinet</a>
+        </div>
     </div>
+
+    <!-- Main Content -->
+    <div class="bg-slate-300 w-screen h-auto p-12">
+        <h1 class="text-center text-2xl font-bold p-8">Stand Against Hate: Ways You Can Help</h1>
+        <p class="text-center text-sm p-4">The tragic death of Balbir Singh Sodhi is a stark reminder of the destructive power of hate. By taking action, you can help create a more inclusive and understanding society. Here are some meaningful ways to get involved.</p>
+    </div>
+
+    <!-- Sections -->
+    <div class="bg-slate-500 w-screen h-auto p-12">
+        <!-- National Organizations -->
+        <h2 class="text-center text-xl font-bold p-8">National Organizations</h2>
+        <p class="text-center p-4 font-medium text-sm">Join national advocacy groups fighting hate crimes and promoting inclusivity.</p>
+        <div class="text-center p-4">
+            <a href="https://www.sikhcoalition.org" class="block text-blue-700 hover:underline">Sikh Coalition</a>
+            <a href="https://www.splcenter.org" class="block text-blue-700 hover:underline">Southern Poverty Law Center</a>
+            <a href="https://www.adl.org" class="block text-blue-700 hover:underline">Anti-Defamation League</a>
+        </div>
+
+        <!-- Local Initiatives -->
+        <h2 class="text-center text-xl font-bold p-8">Local Initiatives</h2>
+        <p class="text-center p-4 font-medium text-sm">Support local community groups and initiatives.</p>
+        <div class="text-center p-4">
+            <a href="https://localinitiativeexample.com" class="block text-blue-700 hover:underline">Local Initiative 1</a>
+            <a href="https://localinitiativeexample.com" class="block text-blue-700 hover:underline">Local Initiative 2</a>
+            <a href="https://localinitiativeexample.com" class="block text-blue-700 hover:underline">Local Initiative 3</a>
+        </div>
+
+        <!-- Volunteer Opportunities -->
+        <h2 class="text-center text-xl font-bold p-8">Volunteer Opportunities</h2>
+        <p class="text-center text-md p-4 font-medium">Engage in community outreach programs or offer pro bono services.</p>
+        <div class="text-center p-4">
+            <a href="https://volunteerexample.com" class="block text-blue-700 hover:underline">Community Outreach Programs</a>
+            <a href="https://volunteerexample.com" class="block text-blue-700 hover:underline">Pro Bono Services</a>
+        </div>
+
+        <!-- Educational Resources -->
+        <h2 class="text-center text-xl font-bold p-8">Educational Resources</h2>
+        <p class="text-center text-md p-4 font-medium">Educate yourself and others on hate crimes and community solidarity.</p>
+        <div class="text-center p-4">
+            <a href="https://educationalresourceexample.com" class="block text-blue-700 hover:underline">Recommended Reading</a>
+            <a href="https://educationalresourceexample.com" class="block text-blue-700 hover:underline">Workshops and Seminars</a>
+        </div>
+
+        <!-- Donations and Fundraising -->
+        <h2 class="text-center text-xl font-bold p-8">Support Financially</h2>
+        <p class="text-center text-md p-4 font-medium">Donate to causes aiding hate crime victims or participate in fundraising events.</p>
+        <div class="text-center p-4">
+            <a href="https://donateexample.com" class="block text-blue-700 hover:underline">Donate to Causes</a>
+            <a href="https://fundraisingexample.com" class="block text-blue-700 hover:underline">Fundraising Events</a>
+        </div>
+
+        <!-- Social Media and Online Advocacy -->
+        <h2 class="text-center text-xl font-bold p-8">Amplify Your Voice</h2>
+        <p class="text-center text-md p-4 font-medium">Use social media to raise awareness or join online campaigns.</p>
+        <div class="text-center p-4">
+            <a href="https://twitter.com" class="block text-blue-700 hover:underline">Share on Twitter</a>
+            <a href="https://facebook.com" class="block text-blue-700 hover:underline">Share on Facebook</a>
+            <a href="https://instagram.com" class="block text-blue-700 hover:underline">Share on Instagram</a>
+        </div>
+        
+        <!-- Personal Stories and Testimonials -->
+        <h2 class="text-center text-xl font-bold p-8">Hear from Others</h2>
+        <p class="text-center text-md p-4 font-medium">Listen to personal stories from hate crime survivors and community leaders.</p>
+        <div class="text-center p-4">
+            <a href="https://storyexample.com" class="block text-blue-700 hover:underline">Survivor Stories</a>
+            <a href="https://impactexample.com" class="block text-blue-700 hover:underline">Community Impact</a>
+        </div>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>

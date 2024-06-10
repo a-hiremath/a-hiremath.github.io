@@ -1,64 +1,55 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="custom.css">
 </head>
-<body class="bg-slate-300">
+<body class="bg-slate-400 w-screen">
 
-<div class="grid-'" style="height: 100vh">
-    <!-- navbar  -->
-    <div class="grid grid-cols-2 bg-slate-400 w-screen p-6">
-        <div>
-            <p class="italic text-center font-bold">Cabinet of Curiosities</p>
-            <p class="px-7 text-sm text-center">Sam Ewen, Sam Helft, Aditya Hiremath</p>
-        </div>
+    <!-- Main Container -->
+    <div id="navContainer" class="flex flex-col justify-between items-center p-2 bg-slate-400 transition-all duration-500 ease-in-out">
+        <!-- Nav Bar Wrapper -->
+        <div class="flex p-3 justify-between w-full">
+            <!-- Left Content -->
+            <div class="animate__animated animate__slideInLeft text-left italic ">
+                <p class="font-extrabold text-center">Cabinet of Curiosities</p>
+                <p class="text-sm font-normal">Aditya Hiremath, Sam Ewen, Sam Helft</p>
+            </div>
+            
+            <!-- Right Links -->
+            <div id="navBarItems" class="hidden lg:flex p-2">
+                <a href="index.html" class=" font-medium px-5 hover:text-blue-700 page-transition">Home</a>
+                <a href="getInvolved.html" class="font-medium px-5 hover:text-blue-700 page-transition">Get Involved</a>
+                <a href="cabinet.html" class="px-5 font-semibold underline underline-offset-4 hover:text-blue-700 page-transition">About our Cabinet</a>
+            </div>
 
-        <div class="animate__animated animate__slideInRight grid grid-cols-3">
-            <a href="index.html" class="py-2 text-center font-semibold hover:text-blue-700 homeButton page-transition">Home</a>
-            <a href="getInvolved.html" class="animate__animated py-2 text-center font-medium hover:text-blue-700 getInvolvedButton page-transition">Get Involved</a>
-            <a href="cabinet.html" class="py-2 text-center underline underline-offset-4 font-semibold hover:text-blue-700 aboutButton page-transition">About our Cabinet</a>
-        </div>
-    </div>
-
-    <!-- div1 -->
-
-    <div class="grid grid-rows-3 gap-5 mt-5 mb-5">
-        <div class="bg-slate-700 flex">
-            <div class="w-1/2  bg-slate-600"></div>
-            <div class="w-2/3 bg-slate-200">
-                <p class="text-center py-12 px-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae nobis commodi pariatur nisi expedita exercitationem. Est, nihil modi? Veniam deserunt laboriosam atque qui totam incidunt magnam praesentium soluta. Fugit, unde odio tenetur eum sequi aut enim cum ut sint reprehenderit quisquam incidunt quod doloremque ad deleniti eos laborum veniam delectus repudiandae nam, ullam vel molestias? Voluptas nemo voluptate enim, laboriosam dolorem cumque libero at quo! Possimus assumenda quas illo aspernatur fugit! Et sint eius aperiam, soluta quam repellendus laboriosam beatae deleniti illo perspiciatis debitis cumque suscipit! Ipsam rerum molestias dolorem sit minima!</p>
+            <!-- Hamburger Menu for Mobile -->
+            <div id="hamburger" class="lg:hidden flex flex-col justify-center items-end p-4 space-y-2 pr-8 hover:cursor-pointer">
+                <span class="block h-0.5 w-8 bg-white"></span>
+                <span class="block h-0.5 w-8 bg-white"></span>
+                <span class="block h-0.5 w-8 bg-white"></span>
             </div>
         </div>
-        
-        
-        <!-- <center>
-            <iframe class="justify-center" src="https://www.retrogames.cc/embed/10062-street-fighter-iii-3rd-strike%3A-fight-for-the-future-usa-990608.html" width="1333" height="1000" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
-        </center> --> 
-        
-        
-        <div class="bg-slate-700 flex">
 
-            <div class=" backInRight w-2/3 bg-slate-200">
-                <p class="text-center py-12 px-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae nobis commodi pariatur nisi expedita exercitationem. Est, nihil modi? Veniam deserunt laboriosam atque qui totam incidunt magnam praesentium soluta. Fugit, unde odio tenetur eum sequi aut enim cum ut sint reprehenderit quisquam incidunt quod doloremque ad deleniti eos laborum veniam delectus repudiandae nam, ullam vel molestias? Voluptas nemo voluptate enim, laboriosam dolorem cumque libero at quo! Possimus assumenda quas illo aspernatur fugit! Et sint eius aperiam, soluta quam repellendus laboriosam beatae deleniti illo perspiciatis debitis cumque suscipit! Ipsam rerum molestias dolorem sit minima!</p>
-            </div>
-
-            <div class="w-1/2 bg-slate-600"></div>
-        
-            </div>
-
-        <div class="bg-slate-700 flex">
-            <div class="w-1/2  bg-slate-600"></div>
-            <div class="w-2/3 bg-slate-200">
-                <p class="text-center py-12 px-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae nobis commodi pariatur nisi expedita exercitationem. Est, nihil modi? Veniam deserunt laboriosam atque qui totam incidunt magnam praesentium soluta. Fugit, unde odio tenetur eum sequi aut enim cum ut sint reprehenderit quisquam incidunt quod doloremque ad deleniti eos laborum veniam delectus repudiandae nam, ullam vel molestias? Voluptas nemo voluptate enim, laboriosam dolorem cumque libero at quo! Possimus assumenda quas illo aspernatur fugit! Et sint eius aperiam, soluta quam repellendus laboriosam beatae deleniti illo perspiciatis debitis cumque suscipit! Ipsam rerum molestias dolorem sit minima!</p>
-            </div>
+        <!-- Dropdown Menu for Mobile -->
+        <div id="menu" class="hidden py-6 flex-col top-20 text-center absolute bg-white w-screen py-7s shadow-lg border-t border-gray-200 transition-all duration-500 ease-in-out transform opacity-0">
+            <a href="index.html" class="p-2 hover:bg-gray-100">Home</a>
+            <a href="getInvolved.html" class="p-2 hover:bg-gray-100">Get Involved</a>
+            <a href="cabinet.html" class="p-2 hover:bg-gray-100">About our Cabinet</a>
         </div>
     </div>
+
+<div class="w-screen bg-gray-200 h-screen grid grid-cols-2">
+
 </div>
+    
 
 
-<script src="index.js"></script>
+
+
+    <script src="index.js"></script>
 </body>
 </html>
