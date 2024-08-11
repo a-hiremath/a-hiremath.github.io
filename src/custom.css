@@ -27,12 +27,6 @@ body {
     display: flex;
 }
 
-@media screen and (max-width: 680px) {
-    #navBarItems, #testTest {
-        display: none;
-    }
-}
-
 /* Background Images for Responsive Design */
 #flower {
     background-image: var(--bg-image-flower);

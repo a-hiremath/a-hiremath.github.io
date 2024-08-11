@@ -1,25 +1,56 @@
+width = screen.width;
+var over640; 
 
-var windowWidth;
-var windowHeight;
-var windowWidthMax;
-var windowHeightMax;
-
+(width > 640) ? over640 = true : over640 = false;  
 
 
-function windowDimensions(){
-    var windowWidth = window.innerWidth;
-    var windowHeight = window.innerHeight;
+function hamtoggle(){
+    document.getElementById('hamburger').classList.toggle('hidden')
 }
 
-windowDimensions();
+function navtoggle(){
+    document.getElementById('nav1').classList.toggle('hidden');
+    document.getElementById('nav2').classList.toggle('hidden');
+    document.getElementById('nav3').classList.toggle('hidden');
+}
 
-window.addEventListener('resize', resizeFunction(){
+function navcheck(){
+    if (document.getElementById('nav1').classList.contains('hidden')){
+        return true;
+    } else {
+        return false; 
+    }
+}
 
-    windowDimensions();
+function hamcheck(){
+    if (document.getElementById('hamburger').classList.contains('hidden')){
+        return true;
+    } else {
+        return false; 
+    }
+}
 
-    if (windowWidth ) {
 
+
+function toggle(){
+    hamtoggle();
+    navtoggle();
+}
+
+(width > 640) ? hamtoggle() : navtoggle();
+
+
+window.addEventListener('resize', function(){
+    width = screen.width;
+    let isOver640Now = (width > 640);
+
+    // Check if the width has crossed the 640px boundary
+    if (isOver640Now !== over640) {
+        toggle();
+        over640 = isOver640Now;  // Update the condition
     }
 
+    console.log(isOver640Now + ' ' + width + ' ' + over640);
+});
 
-})
+console.log(over640);
