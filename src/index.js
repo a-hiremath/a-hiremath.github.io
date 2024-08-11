@@ -1,7 +1,9 @@
 width = screen.width;
 var over640; 
+burger = document.getElementById('hamburger');
 
-(width > 640) ? over640 = true : over640 = false;  
+
+(width > 700) ? over640 = true : over640 = false;  
 
 
 function hamtoggle(){
@@ -37,12 +39,12 @@ function toggle(){
     navtoggle();
 }
 
-(width > 640) ? hamtoggle() : navtoggle();
+(width > 700) ? hamtoggle() : navtoggle();
 
 
 window.addEventListener('resize', function(){
     width = screen.width;
-    let isOver640Now = (width > 640);
+    let isOver640Now = (width > 700);
 
     // Check if the width has crossed the 640px boundary
     if (isOver640Now !== over640) {
@@ -54,3 +56,13 @@ window.addEventListener('resize', function(){
 });
 
 console.log(over640);
+
+menu = document.getElementById('menu')
+
+burger.addEventListener('click', function(){
+
+    console.log('clicked');
+    
+    menu.classList.toggle('hidden');
+
+})
