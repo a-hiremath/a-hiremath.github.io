@@ -1,16 +1,39 @@
 width = screen.width;
 var over640; 
 burger = document.getElementById('hamburger');
-
+var removed = 0;
 
 
 (width > 700) ? over640 = true : over640 = false;  
 
+function reorder(element){
 
 
-function delClass(elementid){
+    
+
+    console.log(element.id + ' this is an image')
+
+    parent = (element.parentNode).parentNode;
+
+
+
+    if (parent.firstElementChild.firstElementChild.id == element.id){
+        console.log('skipped')
+        return;
+    } else {
+
+        parent.appendChild(parent.firstElementChild);
+
+        
+    }
+
+}
+
+
+function delClass(elementid, class1, class2){
 
     var classes = document.getElementById(elementid).classList;    
+    var elem = document.getElementById(elementid);
 
     classlength = classes.length
 
@@ -18,12 +41,18 @@ function delClass(elementid){
     console.log('classes: ' + classes + ' length: ' + classlength);
 
 
-    classes.remove('grid', 'grid-cols-1');
+    classes.remove(class1, class2);
+
+    if (classlength != classes.length) {
+        console.log('removed');
+        removed ++; 
+    }
 
     classlength != classes.length ? console.log('removed') : console.log('not removed');
     
-
 }
+
+
 
 
 function mobilesizing(){
@@ -39,9 +68,21 @@ function mobilesizing(){
         element.id = ('element' + String(i));
         console.log(element.id);
 
-        delClass(element.id);
-        
+        delClass(element.id, 'grid', 'grid-cols-2');
+        delClass(element.id, 'border-black', 'border-2');
+        delClass(element.id, 'border-b-4', 'border-l-4');
+        delClass(element.id, 'border-t-4', 'border-r-4');
+
+        elementattributes = element.attributes;
+        console.log(elementattributes);
+
+        if (elementattributes.getNamedItem('src') && (element.id != 'element2')) {
+            reorder(elementArray[i]);
+        }
+
     }
+
+    
 
 }
 
