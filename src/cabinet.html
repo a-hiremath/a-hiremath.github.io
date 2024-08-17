@@ -8,42 +8,47 @@
     <link rel="stylesheet" href="custom.css">
 </head>
 <body class="bg-slate-400 w-screen">
+<!-- Main Container -->
+<div id="navContainer" class="flex flex-col justify-between items-center p-2 bg-slate-400 transition-all duration-500 ease-in-out">
+    <!-- Nav Bar Wrapper -->
+    <div class="flex p-3 justify-between w-full">
+        <!-- Left Content -->
 
-    <!-- Main Container -->
-    <div id="navContainer" class="flex flex-col justify-between items-center p-2 bg-slate-400 transition-all duration-500 ease-in-out">
-        <!-- Nav Bar Wrapper -->
-        <div class="flex p-3 justify-between w-full">
-            <!-- Left Content -->
-            <div class="animate__animated animate__slideInLeft text-left italic ">
-                <p class="font-extrabold text-center">Cabinet of Curiosities</p>
-                <p class="text-sm font-normal">Aditya Hiremath, Sam Ewen, Sam Helft</p>
+        <div class="animate__animated animate__slideInLeft text-left italic pl-4">
+            <p class="font-extrabold text-center">Cabinet of Curiosities</p>
+            <p class="flex whitespace-nowrap text-sm font-normal">Aditya Hiremath, Sam Ewen, Sam Helft</p>
+        </div>
+    
+        <!-- Right Links -->
+        <div id="navBarItems" class="py-2 w-full justify-end">
+            <a href="index.html" id="nav1" class="whitespace-nowrap underline underline-offset-4 px-5 hover:text-blue-700 page-transition">Home</a>
+            <a href="getInvolved.html" id="nav2" class="font-medium whitespace-nowrap px-5 hover:text-blue-700 page-transition">Get Involved</a>
+            <a href="cabinet.html" id="nav3" class="px-5 font-medium hover:text-blue-700 whitespace-nowrap page-transition">About our Cabinet</a>
+        </div>
+        
+        <div>
+            <!-- Hamburger Menu for Mobile -->
+            <div id="hamburger" class="flex flex-col justify-center items-end p-4 space-y-2 pr-4 hover:cursor-pointer">
+                <span class="block h-0.5 w-8 bg-white"></span>
+                <span class="block h-0.5 w-8 bg-white"></span>
+                <span class="block h-0.5 w-8 bg-white"></span>
+            </div>
+
+             <!-- Dropdown Menu -->
+             <div class="absolute">
+                 <div id="menu" class="hidden relative right-5 flex-col text-center bg-white w-full shadow-lg border-t border-gray-200 top-full">
+                <a href="index.html" class="block p-4 text-gray-700 hover:bg-gray-100 hover:text-blue-700">Home</a>
+                <a href="getInvolved.html" class="block p-4 text-gray-700 hover:bg-gray-100 hover:text-blue-700">Get Involved</a>
+                <a href="cabinet.html" class="block p-4 text-gray-700 hover:bg-gray-100 hover:text-blue-700">About our Cabinet</a>
+                 </div>  
             </div>
             
-            <!-- Right Links -->
-            <div id="navBarItems" class="hidden lg:flex p-2">
-                <a href="index.html" class=" font-medium px-5 hover:text-blue-700 page-transition">Home</a>
-                <a href="getInvolved.html" class="font-medium px-5 hover:text-blue-700 page-transition">Get Involved</a>
-                <a href="cabinet.html" class="px-5 font-semibold underline underline-offset-4 hover:text-blue-700 page-transition">About our Cabinet</a>
-            </div>
-
-            <!-- Hamburger Menu for Mobile -->
-            <div id="hamburger" class="lg:hidden flex flex-col justify-center items-end p-4 space-y-2 pr-8 hover:cursor-pointer">
-                <span class="block h-0.5 w-8 bg-white"></span>
-                <span class="block h-0.5 w-8 bg-white"></span>
-                <span class="block h-0.5 w-8 bg-white"></span>
-            </div>
         </div>
 
-        <!-- Dropdown Menu for Mobile -->
-        <div id="menu" class="hidden py-6 flex-col top-20 text-center absolute bg-white w-screen py-7s shadow-lg border-t border-gray-200 transition-all duration-500 ease-in-out transform opacity-0">
-            <a href="index.html" class="p-2 hover:bg-gray-100">Home</a>
-            <a href="getInvolved.html" class="p-2 hover:bg-gray-100">Get Involved</a>
-            <a href="cabinet.html" class="p-2 hover:bg-gray-100">About our Cabinet</a>
-        </div>
     </div>
-        
-
-
+</div>
+    
+<div id="maincontent">
     <!-- Hero Section -->
     <div class="bg-slate-300 w-screen h-auto p-12">
         <p class="text-center">temp</p>
@@ -65,6 +70,7 @@
     <div class="bg-slate-400 w-screen h-auto p-12">
         <p class="text-center">temp</p>
     </div>
+</div>
 
     <script src="index.js"></script>
 </body>
