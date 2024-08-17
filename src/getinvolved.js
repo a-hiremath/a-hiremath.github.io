@@ -43,16 +43,43 @@ function delClass(elementid, class1, class2){
 
     classes.remove(class1, class2);
 
-    if (classlength != classes.length) {
-        console.log('removed');
-        removed ++; 
-    }
-
-    classlength != classes.length ? console.log('removed') : console.log('not removed');
+    classlength != classes.length ? console.log('was removed') : console.log('not removed');
     
 }
 
+function delClass2(elementid, class1){
 
+    var classes = document.getElementById(elementid).classList;    
+    var elem = document.getElementById(elementid);
+
+    classlength = classes.length
+
+
+    console.log('classes: ' + classes + ' length: ' + classlength);
+
+
+    classes.remove(class1);
+
+    classlength != classes.length ? console.log('was removed') : console.log('not removed');
+    
+}
+
+function functioner(element){
+
+    console.log('functioned')
+
+    for (i=0; i<(element.classList.length); i++){
+
+        if (element.classList[i].startsWith('p-') && element.classList[i].length < 5){
+            element.classlist.remove(element.classlist[i]);
+        } else {
+            console.log('continued')
+        }
+    
+    }
+
+
+}
 
 
 function mobilesizing(){
@@ -66,12 +93,17 @@ function mobilesizing(){
         element = elementArray[i];
 
         element.id = ('element' + String(i));
+        el = element.id
         console.log(element.id);
 
         delClass(element.id, 'grid', 'grid-cols-2');
         delClass(element.id, 'border-black', 'border-2');
         delClass(element.id, 'border-b-4', 'border-l-4');
         delClass(element.id, 'border-t-4', 'border-r-4');
+
+        for (n=0;n<elementArray[i].classList.length;n++){
+            
+        }
 
         elementattributes = element.attributes;
         console.log(elementattributes);
@@ -82,9 +114,9 @@ function mobilesizing(){
 
     }
 
-    
-
 }
+
+
 
 console.log(width - 700);
 
