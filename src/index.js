@@ -3,7 +3,51 @@ var over640;
 burger = document.getElementById('hamburger');
 
 
+
 (width > 700) ? over640 = true : over640 = false;  
+
+
+
+function delClass(elementid){
+
+    var classes = document.getElementById(elementid).classList;    
+
+    classlength = classes.length
+
+
+    console.log('classes: ' + classes + ' length: ' + classlength);
+
+
+    classes.remove('grid', 'grid-cols-1');
+
+    classlength != classes.length ? console.log('removed') : console.log('not removed');
+    
+
+}
+
+
+function mobilesizing(){
+
+    var elementArray = maincontent.querySelectorAll("*");
+
+    console.log(elementArray);
+
+    for (i = 0; i < elementArray.length; i++) {
+
+        element = elementArray[i];
+
+        element.id = ('element' + String(i));
+        console.log(element.id);
+
+        delClass(element.id);
+        
+    }
+
+}
+
+console.log(width - 700);
+
+(width - 700 < 0) ? mobilesizing() : console.log('over 700');
 
 
 function hamtoggle(){
