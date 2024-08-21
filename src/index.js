@@ -6,6 +6,53 @@ var removed = 0;
 
 (width > 700) ? over640 = true : over640 = false;  
 
+
+function fonting(addition){
+
+
+    var elementer = bode.querySelectorAll("*")
+
+    console.log('fonted');
+
+    for (i=0; i < elementer.length; i++) {
+
+
+        var element = elementer[i];
+
+        console.log(element.nodeName);
+
+        if( element.nodeName == 'P'){
+
+            console.log('pfonted');
+
+            element.classList.add('pfont');
+
+            console.log(element.classList);
+        }
+
+        if (element.nodeName == 'H1'){
+            console.log('h1fonted');
+            element.classList.add('h1font');
+            console.log(element.classList);
+        }
+
+        if(element.nodeName == 'H2') {
+            console.log('h2 fonted');
+            element.classList.add('h2font')
+            console.log(element.classList);
+        }
+
+    }
+
+
+
+
+}
+
+fonting();
+
+
+
 function reorder(element){
 
 

@@ -7,71 +7,122 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="custom.css">
 </head>
-<body class="bg-slate-400 w-screen">
-<!-- Main Container -->
-<div id="navContainer" class="flex flex-col justify-between items-center p-2 bg-slate-400 transition-all duration-500 ease-in-out">
-    <!-- Nav Bar Wrapper -->
-    <div class="flex p-3 justify-between w-full">
-        <!-- Left Content -->
+<body id="bode" class="bg-slate-400 w-screen">
 
-        <div class="animate__animated animate__slideInLeft text-left italic pl-4">
-            <p class="font-extrabold text-center">Cabinet of Curiosities</p>
-            <p class="flex whitespace-nowrap text-sm font-normal">Aditya Hiremath, Sam Ewen, Sam Helft</p>
-        </div>
-    
-        <!-- Right Links -->
-        <div id="navBarItems" class="py-2 w-full justify-end">
-            <a href="index.html" id="nav1" class="whitespace-nowrap underline underline-offset-4 px-5 hover:text-blue-700 page-transition">Home</a>
-            <a href="getInvolved.html" id="nav2" class="font-medium whitespace-nowrap px-5 hover:text-blue-700 page-transition">Get Involved</a>
-            <a href="cabinet.html" id="nav3" class="px-5 font-medium hover:text-blue-700 whitespace-nowrap page-transition">About our Cabinet</a>
-        </div>
-        
-        <div>
-            <!-- Hamburger Menu for Mobile -->
-            <div id="hamburger" class="flex flex-col justify-center items-end p-4 space-y-2 pr-4 hover:cursor-pointer">
-                <span class="block h-0.5 w-8 bg-white"></span>
-                <span class="block h-0.5 w-8 bg-white"></span>
-                <span class="block h-0.5 w-8 bg-white"></span>
+    <!-- Main Container -->
+    <div id="navContainer" class="flex flex-col justify-between items-center p-2 bg-slate-400 transition-all duration-500 ease-in-out">
+        <!-- Nav Bar Wrapper -->
+        <div class="flex p-3 justify-between w-full">
+            <!-- Left Content -->
+
+            <div class="animate__animated animate__slideInLeft text-left italic pl-4">
+                <p class="font-extrabold text-center">Cabinet of Curiosities</p>
+                <p class="flex whitespace-nowrap text-sm font-normal">Aditya Hiremath, Sam Ewen, Sam Helft</p>
             </div>
-
-             <!-- Dropdown Menu -->
-             <div class="absolute">
-                 <div id="menu" class="hidden relative right-5 flex-col text-center bg-white w-full shadow-lg border-t border-gray-200 top-full">
-                <a href="index.html" class="block p-4 text-gray-700 hover:bg-gray-100 hover:text-blue-700">Home</a>
-                <a href="getInvolved.html" class="block p-4 text-gray-700 hover:bg-gray-100 hover:text-blue-700">Get Involved</a>
-                <a href="cabinet.html" class="block p-4 text-gray-700 hover:bg-gray-100 hover:text-blue-700">About our Cabinet</a>
-                 </div>  
+        
+            <!-- Right Links -->
+            <div id="navBarItems" class="py-2 w-full justify-end">
+                <a href="index.html" id="nav1" class="whitespace-nowrap underline underline-offset-4 px-5 hover:text-blue-700 page-transition">Home</a>
+                <a href="getInvolved.html" id="nav2" class="font-medium whitespace-nowrap px-5 hover:text-blue-700 page-transition">Get Involved</a>
+                <a href="cabinet.html" id="nav3" class="px-5 font-medium hover:text-blue-700 whitespace-nowrap page-transition">About our Cabinet</a>
             </div>
             
+            <div>
+                <!-- Hamburger Menu for Mobile -->
+                <div id="hamburger" class="flex flex-col justify-center items-end p-4 space-y-2 pr-4 hover:cursor-pointer">
+                    <span class="block h-0.5 w-8 bg-white"></span>
+                    <span class="block h-0.5 w-8 bg-white"></span>
+                    <span class="block h-0.5 w-8 bg-white"></span>
+                </div>
+
+                 <!-- Dropdown Menu -->
+                 <div class="absolute">
+                     <div id="menu" class="hidden relative right-5 flex-col text-center bg-white w-full shadow-lg border-t border-gray-200 top-full">
+                    <a href="index.html" class="block p-4 text-gray-700 hover:bg-gray-100 hover:text-blue-700">Home</a>
+                    <a href="getInvolved.html" class="block p-4 text-gray-700 hover:bg-gray-100 hover:text-blue-700">Get Involved</a>
+                    <a href="cabinet.html" class="block p-4 text-gray-700 hover:bg-gray-100 hover:text-blue-700">About our Cabinet</a>
+                     </div>  
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+      
+<div id="maincontent">
+    <!-- Main Content -->
+    <div class="bg-slate-300 w-screen h-auto p-12">
+        <h1 class="text-center text-2xl font-bold p-8" style="">About our Project</h1>
+        <p class="text-center text-sm p-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi quod obcaecati aliquam odit vero fugit repudiandae asperiores placeat optio corrupti perspiciatis expedita labore mollitia quo ea, accusamus consequuntur doloremque.</p>
+    </div>
+
+    <!-- Sections -->
+    <div class="bg-slate-500 w-screen h-auto p-12">
+        
+        <!-- National Organizations -->
+
+        <div class="grid grid-cols-2">
+
+            <div class="border-2 border-black border-l-4 border-t-4 p-16 bg-slate-400">
+                <h2 class="text-center text-xl font-bold p-8">The Flower</h2>
+                <p class="text-center p-4 font-medium text-sm">Flower- On November 15th, 2001, just four days after 9/11, Balbir Singh Sodhi was outside his family-owned and operated gas station, planting flowers for the victims of 9/11. Moments later, he was shot dead in an Islamaphobic attack, and the flowers he meant to have planted never reached the soil. Our group decided to honor Balbir and the victims of 9/11 by planting the flowers he never got to. Hence, the flower provides a message to the viewer of what could have been. </p>
+            </div>
+
+            <div class="border-2 border-black border-r-4 border-t-4 p-16 bg-slate-800">
+                <img class="max-h-96 object-contain" src="images/footer-logo.png" alt="temp">
+            </div>
+
+        </div>
+        
+        <!-- Local Initiatives -->
+
+        <div class="grid grid-cols-2">
+
+                <div class="border-2 border-black p-16 border-l-4 bg-slate-800">
+                    <img class="max-h-96 object-contain" src="images/image.jpeg" alt="temp">
+                </div>
+
+                <div class="border-2 border-black border-r-4 p-16 bg-slate-400">
+                <h2 class="text-center text-xl font-bold p-8">Newspaper</h2>
+                <p class="text-center p-4 font-medium text-sm">News Paper- Newspapers tell stories of local and national events; they cover almost anything from town parades to celebrity sightings. Newspapers do more than say to the news; they also tell stories and spread information. But Balbir’s murder never made the news until 16 years after his death, and because of this, we felt it was essential to show how his death should have been presented. We believe that instead of censorship, horrific attacks based on hatred should be known by the public to spread awareness. We want people to understand that these injustices are prevalent and not a thing of the past.</p>
+                
+
+                </div>
+
+        </div>  
+
+        <!-- Volunteer Opportunities -->
+        
+        <div class="grid grid-cols-2">
+        
+            <div class="border-2 border-black p-16 border-l-4 bg-slate-400">
+                <h2 class="text-center text-xl font-bold p-8">Lighting</h2>
+                <p class="text-center text-md p-4 font-medium">The flashing lights in our cabinet represent multiple things from our story; one being the police lights. This was a crime scene so when it happened there were many police and ambulance arriving with bright flashing lights.</p>
+            </div>  
+        
+            <div class="border-2 border-black border-r-4 p-16 bg-slate-800">
+                <img class="max-h-96 object-contain" src="images/image.png" alt="temp">
+            </div>
+        
+        </div>
+        
+        <!-- Educational Resources -->
+        
+        <div class="grid grid-cols-2">
+            
+            <div class="border-2 border-b-4 border-black border-l-4 p-16 bg-slate-800">
+                <img class="max-h-96 object-contain" src="images/NMAH-AHB2013q017784.jpg" alt="temp">
+            </div>
+
+            <div class="border-2 border-black border-b-4 border-r-4 p-16 bg-slate-400">
+                <h2 class="text-center text-xl font-bold p-8">Red Dye</h2>
+                <p class="text-center text-md p-4 font-medium">Splattered all over the bouquet of flowers is red dye. This represents the blood of Sodhi as he was shot and killed while planting the flowers.</p>
+            </div>
+        
         </div>
 
     </div>
 </div>
-    
-<div id="maincontent">
-    <!-- Hero Section -->
-    <div class="bg-slate-300 w-screen h-auto p-12">
-        <p class="text-center">temp</p>
-    </div>
-
-   <!-- Historical Context Section -->
-<div class="bg-gray-200 w-screen h-auto p-12">
-    <h1 class="text-center">temp</h1>
-</div>
-
-
-
-    <!-- Legacy and Impact Section -->
-    <div class="bg-gray-300 w-screen h-auto p-12">
-        <p class="text-center">temp</p>
-    </div>
-
-    <!-- Call to Action Section -->
-    <div class="bg-slate-400 w-screen h-auto p-12">
-        <p class="text-center">temp</p>
-    </div>
-</div>
-
-    <script src="index.js"></script>
+    <script src="cabinet.js"></script>
 </body>
 </html>
