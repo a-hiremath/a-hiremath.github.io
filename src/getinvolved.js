@@ -133,11 +133,31 @@ function mobilesizing(){
     var elementArray = maincontent.querySelectorAll("*");
 
     console.log(elementArray);
+    potential = ['-','y-','x-','r-','l-','t-','b-'];
 
     for (i = 0; i < elementArray.length; i++) {
 
         element = elementArray[i];
 
+        for (a = 0; 1 < elementArray.length; a++) {
+
+            if (element.nodeName == 'P' || element.nodeName == 'H2'){
+
+                for (b=0; b < element.classlist.length; b++){
+                    
+                    for(c = 0; c < potential.length; c++){
+
+                    if (element.classlist[b].startsWith('p' + potential[c])){
+                        element.classList.remove(element.classlist[b]);
+                    }
+
+                    }
+                }
+
+            }
+
+        }
+        
         element.id = ('element' + String(i));
         el = element.id
         console.log(element.id);
@@ -159,6 +179,9 @@ function mobilesizing(){
         }
 
     }
+
+
+
 
 }
 
