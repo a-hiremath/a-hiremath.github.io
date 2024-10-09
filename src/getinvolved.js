@@ -7,46 +7,20 @@ var removed = 0;
 (width > 700) ? over640 = true : over640 = false;  
 
 
-function fonting(addition){
+function fonting(){
+    const classMap = {
+        'P': 'pfont',
+        'H1': 'h1font',
+        'H2': 'h2font'
+    };
 
-
-    var elementer = bode.querySelectorAll("*")
-
-    console.log('fonted');
-
-    for (i=0; i < elementer.length; i++) {
-
-
-        var element = elementer[i];
-
-        console.log(element.nodeName);
-
-        if( element.nodeName == 'P'){
-
-            console.log('pfonted');
-
-            element.classList.add('pfont');
-
-            console.log(element.classList);
+    document.querySelectorAll('*').forEach(element => {
+        const classToAdd = classMap[element.nodeName];
+        if (classToAdd) {
+            element.classList.add(classToAdd);
+            console.log(`${element.nodeName} fonted with ${classToAdd}`);
         }
-
-        if (element.nodeName == 'H1'){
-            console.log('h1fonted');
-            element.classList.add('h1font');
-            console.log(element.classList);
-        }
-
-        if(element.nodeName == 'H2') {
-            console.log('h2 fonted');
-            element.classList.add('h2font')
-            console.log(element.classList);
-        }
-
-    }
-
-
-
-
+    });
 }
 
 fonting();
@@ -76,22 +50,13 @@ function reorder(element){
 }
 
 
-function delClass(elementid, class1, class2){
-
-    var classes = document.getElementById(elementid).classList;    
-    var elem = document.getElementById(elementid);
-
-    classlength = classes.length
-
-
-    console.log('classes: ' + classes + ' length: ' + classlength);
-
-
-    classes.remove(class1, class2);
-
-    classlength != classes.length ? console.log('was removed') : console.log('not removed');
-    
+function delClass(elementId, ...classesToRemove){
+    var elem = document.getElementById(elementId);
+    if (elem) {
+        elem.classList.remove(...classesToRemove);
+    }
 }
+
 
 function delClass2(elementid, class1){
 
@@ -129,60 +94,27 @@ function functioner(element){
 
 
 function mobilesizing(){
-
     var elementArray = maincontent.querySelectorAll("*");
+    const classRemovals = ['grid', 'grid-cols-2', 'border-black', 'border-2', 'border-b-4', 'border-l-4', 'border-t-4', 'border-r-4'];
 
-    console.log(elementArray);
-    potential = ['-','y-','x-','r-','l-','t-','b-'];
-
-    for (i = 0; i < elementArray.length; i++) {
-
-        element = elementArray[i];
-
-        for (a = 0; 1 < elementArray.length; a++) {
-
-            if (element.nodeName == 'P' || element.nodeName == 'H2'){
-
-                for (b=0; b < element.classlist.length; b++){
-                    
-                    for(c = 0; c < potential.length; c++){
-
-                    if (element.classlist[b].startsWith('p' + potential[c])){
-                        element.classList.remove(element.classlist[b]);
-                    }
-
-                    }
+    elementArray.forEach((element, index) => {
+        element.id = 'element' + index;
+        if (['P', 'H2'].includes(element.nodeName)) {
+            element.classList.forEach(className => {
+                if (className.startsWith('p-') || className.startsWith('py-') || className.startsWith('px-')) {
+                    element.classList.remove(className);
                 }
-
-            }
-
+            });
         }
         
-        element.id = ('element' + String(i));
-        el = element.id
-        console.log(element.id);
+        // Remove predefined classes in a batch
+        element.classList.remove(...classRemovals);
 
-        delClass(element.id, 'grid', 'grid-cols-2');
-        delClass(element.id, 'border-black', 'border-2');
-        delClass(element.id, 'border-b-4', 'border-l-4');
-        delClass(element.id, 'border-t-4', 'border-r-4');
-
-        for (n=0;n<elementArray[i].classList.length;n++){
-            
+        // Handle image reordering
+        if (element.attributes.getNamedItem('src') && element.id != 'element2') {
+            reorder(element);
         }
-
-        elementattributes = element.attributes;
-        console.log(elementattributes);
-
-        if (elementattributes.getNamedItem('src') && (element.id != 'element2')) {
-            reorder(elementArray[i]);
-        }
-
-    }
-
-
-
-
+    });
 }
 
 
@@ -220,10 +152,15 @@ function hamcheck(){
 
 
 
-function toggle(){
-    hamtoggle();
-    navtoggle();
+function toggle() {
+    const isNavHidden = document.getElementById('nav1').classList.contains('hidden');
+    if (width > 700 && isNavHidden) {
+        navtoggle();
+    } else if (width <= 700 && !isNavHidden) {
+        navtoggle();
+    }
 }
+
 
 (width > 700) ? hamtoggle() : navtoggle();
 
